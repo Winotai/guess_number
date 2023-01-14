@@ -11,7 +11,7 @@ class GamePage extends StatefulWidget {
 }
 
 class _GamePageState extends State<GamePage> {
-  final _controler = TextEditingController();
+  final _controller = TextEditingController();
   final _game = Game(maxRandom: 100);
   var _feedbackText = '';
   @override
@@ -54,7 +54,7 @@ class _GamePageState extends State<GamePage> {
               ),
             ),
             TextField(
-              controller: _controler,
+              controller: _controller,
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Enter your guess',
@@ -65,17 +65,17 @@ class _GamePageState extends State<GamePage> {
               child: OutlinedButton(
                 onPressed: () {
                   //todo:
-                  var input = _controler.text;
+                  var input = _controller.text;
                   var guess = int.tryParse(input);
                   //_game.doGuess(guess!);
                   var result = _game.doGuess(guess!);
                   if(result==GuessResult.correct){
                     setState((){
-                      _feedbackText = 'Too hight, please try again';
+                      _feedbackText = 'Too height, please try again';
                   });
                     _feedbackText = 'Correct!';
                   }else if(result==GuessResult.tooHigh){
-                    _feedbackText = 'Too hight, please try again!';
+                    _feedbackText = 'Too height, please try again!';
                   }else{
                     _feedbackText = 'Too low, please try again!';
                   }

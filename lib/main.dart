@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:guess_number/page/game/test.dart';
+import 'package:guess_number/page/game/game_page.dart';
 
 void main() {
   runApp(const MyApp());

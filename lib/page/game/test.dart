@@ -9,7 +9,7 @@ class GamePage extends StatefulWidget {
 }
 
 class _GamePagesState extends State<GamePage> {
-  var space = 10.0;
+  //var space = 10.0;
 
   @override
   Widget build(BuildContext context) {
